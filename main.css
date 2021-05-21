@@ -1,0 +1,206 @@
+/* Website basic configuration for all browsers */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #282a35;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Top Bar */
+.topBar{
+  display: flex;
+  background-color: #e50914;
+}
+.topBar-left{
+  flex: 40%;
+  padding: 1rem 3rem;
+}
+.topBar-left #websiteTitle{
+  color: #ffffff;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  font-size: 2rem;
+  background-color: transparent;
+  text-decoration: none;
+}
+#websiteTitle i{
+  color: #ffffff;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.topBar-right{
+  flex: 60%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 3rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Currency  Calculator */
+.currencyCalculator{
+  padding: 3rem;
+  background-color: #20325a;
+  margin: 3rem auto;
+  box-shadow: 15px 15px #f1f1f1;
+  width: 80%;
+  
+}
+.formTop{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formBottom{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.currencyExchangeTitle{
+  padding: 2rem;
+  font-size: 3rem;
+  color: #ffffff;
+}
+#currencyAmount{
+  width: 50%;
+}
+#currencyAmount:focus, #currencySource:focus, #currencyTarget:focus{
+  border: 3px solid #e50914;
+}
+#inputErrMsg{
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e50914;
+}
+#changeCurrencyButton, #convertCurrencyButton{
+  padding: 0.3rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem;
+  color: #ffffff;
+  background-color: #e50914;
+}
+#currencySource, #currencyTarget{
+  width: 35%;
+  margin: 0.625rem;
+}
+#currencyAmount, #currencySource, #currencyTarget{
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+#resultSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+#exchangeResult{
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#conversionRate{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+/* Currency Exchange Rate Table */
+.currenciesRates{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  margin: 3rem;
+}
+#exchangeTable{
+  width: 70%;
+  height: 25rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+#exchangeTable caption{
+  font-size: 3rem;
+  padding: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+#exchangeTable th{
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 1rem;
+}
+#exchangeTable th, #exchangeTable td{
+  padding: 0.5rem;
+}
+#exchangeTable tr:not(th){
+  background-color: #f1f1f1;
+}
+#exchangeTable tr:nth-child(odd){
+  background-color: #cccccc;
+}
+#exchangeTable td{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #20325a;
+}
+
+/* Economic News Section */
+.financialNewsSection{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+#financialNewsTitle{
+  padding: 2rem;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.financialNewsTabs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.financialNewsTabs .newsTab{
+  width: 20rem;
+  height: 30rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.newsTabTitle{
+ font-size: 1rem;
+ margin: 1rem 0;
+ border-bottom: 3px solid #e50914;
+}
+.newsTabParagraph{
+ font-size: 1rem;
+ margin-top: 2rem;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer */
+footer{
+  background-color: #e50914;
+  padding: 1.5rem;
+  color: #ffffff;
+  display: flex;
+}
