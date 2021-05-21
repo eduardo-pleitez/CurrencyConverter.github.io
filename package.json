@@ -1,0 +1,15 @@
+{
+  "name": "currencyconverterwebsite",
+  "version": "1.0.0",
+  "description": "Currency Converter Website",
+  "main": "clock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx parcel build index.html"
+  },
+  "author": "Eduardo Mejia",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
