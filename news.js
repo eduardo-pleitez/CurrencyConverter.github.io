@@ -10,8 +10,6 @@ function getnewsData() {
     if (this.readyState == 4 && this.status == 200) {
       let dataResult = JSON.parse (this.responseText);
       displayNews(dataResult);
-      console.log(dataResult);
-      
     }
   }
   dataRequest.open("GET", "https://free-news.p.rapidapi.com/v1/search?q=Forex&lang=en");

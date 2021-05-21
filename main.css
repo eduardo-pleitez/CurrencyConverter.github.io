@@ -36,7 +36,7 @@ body{
 .topBar-right{
   flex: 60%;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   padding-right: 3rem;
   color: #ffffff;
