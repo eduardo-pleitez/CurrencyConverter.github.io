@@ -47,7 +47,6 @@ body{
 /* Currency  Calculator */
 .currencyCalculator{
   padding: 2rem;
-  background-color: #20325a;
   margin: 3rem auto;
   box-shadow: 2px 2px 3px 3px #ffffff;
   width: 80%;
