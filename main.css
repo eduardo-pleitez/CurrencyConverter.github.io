@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #282a35;
+  background-color: #333138;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -46,12 +46,12 @@ body{
 
 /* Currency  Calculator */
 .currencyCalculator{
-  padding: 3rem;
+  padding: 2rem;
   background-color: #20325a;
   margin: 3rem auto;
-  box-shadow: 15px 15px #f1f1f1;
+  box-shadow: 2px 2px 3px 3px #ffffff;
   width: 80%;
-  
+  border-radius: 20px;
 }
 .formTop{
   display:flex;
@@ -63,12 +63,13 @@ body{
   display:flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 .currencyExchangeTitle{
-  padding: 2rem;
+  padding-bottom: 2rem;
   font-size: 3rem;
   color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #currencyAmount{
   width: 50%;
@@ -108,8 +109,8 @@ body{
 #exchangeResult{
   font-size: 3rem;
   font-weight: bold;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 #conversionRate{
