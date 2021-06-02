@@ -34,10 +34,10 @@ function changeSelectSource() {
   let selectSource = document.getElementById("currencySource").selectedIndex;
   let selectTarget = document.getElementById("currencyTarget").selectedIndex;
   let targetLen = document.getElementById("currencyTarget").options.length-1;
-  if (selectSource == selectTarget & selectTarget != targetLen){
+  if (selectSource == selectTarget && selectTarget != targetLen){
     document.getElementById("currencyTarget").selectedIndex += 1;
   } 
-  if (selectSource == selectTarget & selectTarget == targetLen){
+  if (selectSource == selectTarget && selectTarget == targetLen){
     document.getElementById("currencyTarget").selectedIndex -= 1;
   }  
 }

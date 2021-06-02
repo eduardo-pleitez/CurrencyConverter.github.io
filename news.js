@@ -12,7 +12,7 @@ function getnewsData() {
       displayNews(dataResult);
     }
   }
-  dataRequest.open("GET", "https://free-news.p.rapidapi.com/v1/search?q=Forex&lang=en");
+  dataRequest.open("GET", "https://free-news.p.rapidapi.com/v1/search?q=Finance&lang=en");
   dataRequest.setRequestHeader("x-rapidapi-key", "02a0399372msh670c58894de2d19p1de289jsn50dde2225b05");
   dataRequest.setRequestHeader("x-rapidapi-host", "free-news.p.rapidapi.com");
   dataRequest.send();
@@ -25,28 +25,28 @@ function displayNews(dataResult) {
     if(String(dataResult.articles[i].title) !== null || String(dataResult.articles[i].summary) !== null){
       let div;
       div = document.createElement("div");
-      div.className = "newsTab";
-      div.id = "news" + i;
+      div.className = "articleTab";
+      div.id = "article" + i;
       let titleContainer, titleText;
       titleContainer = document.createElement("H2");
-      titleContainer.className = "newsTabTitle"
+      titleContainer.className = "articleTabTitle"
       titleText = document.createTextNode(dataResult.articles[i].title);
       titleContainer.append(titleText);
       let paragraphContainer, paragraphText;
       paragraphContainer = document.createElement("p");
-      paragraphContainer.className = "newsTabParagraph"
+      paragraphContainer.className = "articleTabParagraph"
       paragraphText = document.createTextNode(dataResult.articles[i].summary);
       paragraphContainer.append(paragraphText);
       let newsLink, newsLinkText;
       newsLink = document.createElement("a");
       newsLink.href = dataResult.articles[i].link;
       newsLink.target = "_blank";
-      newsLinkText = document.createTextNode("Read the full news");
+      newsLinkText = document.createTextNode("Read the full article");
       newsLink.append(newsLinkText);
       div.append(titleContainer);
       div.append(paragraphContainer);
       div.append(newsLink);
-      let newsSection = document.getElementById("newsContainer");
+      let newsSection = document.getElementById("articleContainer");
       newsSection.append(div);
     }else {
       i--;
