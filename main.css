@@ -126,20 +126,24 @@ body{
 .currenciesRates{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 3rem;
   margin: 3rem;
+}
+.currenciesRates h1{
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 #exchangeTable{
   width: 70%;
   height: 25rem;
   border-collapse: collapse;
   text-align: center;
-}
-#exchangeTable caption{
-  font-size: 3rem;
-  padding: 2rem;
-  font-weight: bold;
-  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
 #exchangeTable th{
   background-color: #e50914;
@@ -327,20 +331,22 @@ footer{
 .currenciesRates{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 0.5rem;
   margin: 0.5rem;
+}
+.currenciesRates h1{
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 #exchangeTable{
   width: 100%;
   height: auto;
   border-collapse: collapse;
   text-align: center;
-}
-#exchangeTable caption{
-  font-size: 1.5rem;
-  padding: 1rem;
-  font-weight: bold;
-  color: #ffffff;
 }
 #exchangeTable th{
   background-color: #e50914;
