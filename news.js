@@ -13,7 +13,7 @@ function getnewsData() {
     }
   }
   dataRequest.open("GET", "https://free-news.p.rapidapi.com/v1/search?q=Finance&lang=en");
-  dataRequest.setRequestHeader("x-rapidapi-key", "02a0399372msh670c58894de2d19p1de289jsn50dde2225b05");
+  dataRequest.setRequestHeader("x-rapidapi-key", "d42c5452bdmsh26ded46ee25d5cep17ea0ejsne2a6313219e1");
   dataRequest.setRequestHeader("x-rapidapi-host", "free-news.p.rapidapi.com");
   dataRequest.send();
 }

@@ -79,7 +79,7 @@ function getCurrencies(amountValue){
     }
   };
   requestData.open("GET", "https://currencyscoop.p.rapidapi.com/latest");
-  requestData.setRequestHeader("x-rapidapi-key", "02a0399372msh670c58894de2d19p1de289jsn50dde2225b05");
+  requestData.setRequestHeader("x-rapidapi-key", "d42c5452bdmsh26ded46ee25d5cep17ea0ejsne2a6313219e1");
   requestData.setRequestHeader("x-rapidapi-host", "currencyscoop.p.rapidapi.com");
   requestData.send();
 }
