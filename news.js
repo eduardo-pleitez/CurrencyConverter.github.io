@@ -10,11 +10,11 @@ function getnewsData() {
     if (this.readyState == 4 && this.status == 200) {
       let dataResult = JSON.parse (this.responseText);
       displayNews(dataResult);
+    } else{
+      console.error();
     }
   }
-  dataRequest.open("GET", "https://free-news.p.rapidapi.com/v1/search?q=Finance&lang=en");
-  dataRequest.setRequestHeader("x-rapidapi-key", "d42c5452bdmsh26ded46ee25d5cep17ea0ejsne2a6313219e1");
-  dataRequest.setRequestHeader("x-rapidapi-host", "free-news.p.rapidapi.com");
+  dataRequest.open("GET", "/.netlify/functions/getArticlesData");
   dataRequest.send();
 }
 

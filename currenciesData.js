@@ -76,13 +76,14 @@ function getCurrencies(amountValue){
     if (this.readyState == 4 && this.status == 200) {
       let currenciesResult = JSON.parse(this.responseText);
       myData(currenciesResult, amountValue);
+    }else{
+      console.error();
     }
   };
-  requestData.open("GET", "https://currencyscoop.p.rapidapi.com/latest");
-  requestData.setRequestHeader("x-rapidapi-key", "d42c5452bdmsh26ded46ee25d5cep17ea0ejsne2a6313219e1");
-  requestData.setRequestHeader("x-rapidapi-host", "currencyscoop.p.rapidapi.com");
+  requestData.open("GET", "/.netlify/functions/getCurrenciesData");
   requestData.send();
 }
+
 
 /*Display data*/
 function myData(data, amountValue){

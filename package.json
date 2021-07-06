@@ -4,12 +4,15 @@
   "description": "Currency Converter Website",
   "main": "clock.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions",
     "build": "npx parcel build index.html"
   },
   "author": "Eduardo Mejia",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "netlify-lambda": "^2.0.11",
     "parcel-bundler": "^1.12.5"
   }
 }
