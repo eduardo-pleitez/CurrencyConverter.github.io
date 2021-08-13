@@ -8,10 +8,8 @@ function getnewsData() {
   let dataRequest = new XMLHttpRequest();
   dataRequest.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      let dataResult = JSON.parse (this.responseText);
+      let dataResult = JSON.parse(this.responseText);
       displayNews(dataResult);
-    } else{
-      console.error();
     }
   }
   dataRequest.open("GET", "/.netlify/functions/getArticlesData");

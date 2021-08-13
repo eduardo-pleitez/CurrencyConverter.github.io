@@ -76,8 +76,6 @@ function getCurrencies(amountValue){
     if (this.readyState == 4 && this.status == 200) {
       let currenciesResult = JSON.parse(this.responseText);
       myData(currenciesResult, amountValue);
-    }else{
-      console.error();
     }
   };
   requestData.open("GET", "/.netlify/functions/getCurrenciesData");
@@ -92,241 +90,241 @@ function myData(data, amountValue){
 
   /* Conversion result data */
   if(selectSource == 0 && selectTarget == 1){
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " EUR = " + conversionResult +  " USD";
   }else if (selectSource == 0 && selectTarget == 2){
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " EUR = " + conversionResult +  " GBP";
   }else if (selectSource == 0 && selectTarget == 3){
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(3);
     document.getElementById("exchangeResult").innerHTML = amountValue + " EUR = " + conversionResult +  " JPY";
   }else if (selectSource == 0 && selectTarget == 4){
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " EUR = " + conversionResult +  " CAD";
   }else if (selectSource == 0 && selectTarget == 5){
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " EUR = " + conversionResult +  " CHF";
   } else if (selectSource == 1 && selectTarget == 0){
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " USD = " + conversionResult +  " EUR";
   }else if (selectSource == 1 && selectTarget == 2){
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " USD = " + conversionResult +  " GBP";
   }else if (selectSource == 1 && selectTarget == 3){
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(3);
     document.getElementById("exchangeResult").innerHTML = amountValue + " USD = " + conversionResult +  " JPY";
   }else if (selectSource == 1 && selectTarget == 4){
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " USD = " + conversionResult +  " CAD";
   }else if (selectSource == 1 && selectTarget == 5){
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " USD = " + conversionResult +  " CHF";
   }else if (selectSource == 2 && selectTarget == 0){
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " GBP = " + conversionResult +  " EUR";
   }else if (selectSource == 2 && selectTarget == 1){
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " GBP = " + conversionResult +  " USD";
   }else if (selectSource == 2 && selectTarget == 3){
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(3);
     document.getElementById("exchangeResult").innerHTML = amountValue + " GBP = " + conversionResult +  " JPY";
   }else if (selectSource == 2 && selectTarget == 4){
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " GBP = " + conversionResult +  " CAD";
   }else if (selectSource == 2 && selectTarget == 5){
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " GBP = " + conversionResult +  " CHF";
   }else if (selectSource == 3 && selectTarget == 0){
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " JPY = " + conversionResult +  " EUR";
   }else if (selectSource == 3 && selectTarget == 1){
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " JPY = " + conversionResult +  " USD";
   }else if (selectSource == 3 && selectTarget == 2){
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " JPY = " + conversionResult +  " GBP";
   }else if (selectSource == 3 && selectTarget == 4){
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " JPY = " + conversionResult +  " CAD";
   }else if (selectSource == 3 && selectTarget == 5){
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " JPY = " + conversionResult +  " CHF";
   }else if (selectSource == 4 && selectTarget == 0){
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CAD = " + conversionResult +  " EUR";
   }else if (selectSource == 4 && selectTarget == 1){
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CAD = " + conversionResult +  " USD";
   }else if (selectSource == 4 && selectTarget == 2){
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CAD = " + conversionResult +  " GBP";
   }else if (selectSource == 4 && selectTarget == 3){
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(3);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CAD = " + conversionResult +  " JPY";
   }else if (selectSource == 4 && selectTarget == 5){
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CAD = " + conversionResult +  " CHF";
   }else if (selectSource == 5 && selectTarget == 0){
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CHF = " + conversionResult +  " EUR";
   }else if (selectSource == 5 && selectTarget == 1){
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CHF = " + conversionResult +  " USD";
   }else if (selectSource == 5 && selectTarget == 2){
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CHF = " + conversionResult +  " GBP";
   }else if (selectSource == 5 && selectTarget == 3){
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(3);
     document.getElementById("exchangeResult").innerHTML = amountValue + " CHF = " + conversionResult +  " JPY";
   }else if (selectSource == 5 && selectTarget == 4){
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion =(((currency1Figures*10000)/(currency2Figures*10000))*(amountValue*100))/100;
     let conversionResult = conversion.toFixed(4);
@@ -338,45 +336,45 @@ function myData(data, amountValue){
 
   /* Euro row */
   {
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("eurusd").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("eurgbp").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(3);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("eurchf").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(3);
     document.getElementById("eurjpy").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.EUR);
+    let currency2 = Number(data.rates.EUR);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
@@ -386,45 +384,45 @@ function myData(data, amountValue){
 
   /* Dollar row */
   {
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("usdeur").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000))
     let conversionResult = conversion.toFixed(4);
     document.getElementById("usdgbp").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000))
     let conversionResult = conversion.toFixed(4);
     document.getElementById("usdchf").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000))
     let conversionResult = conversion.toFixed(3);
     document.getElementById("usdjpy").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.USD);
+    let currency2 = Number(data.rates.USD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000))
     let conversionResult = conversion.toFixed(4);
@@ -434,45 +432,45 @@ function myData(data, amountValue){
 
   /* Pound Sterling row */
   {
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("gbpeur").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("gbpusd").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("gbpchf").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(3);
     document.getElementById("gbpjpy").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.GBP);
+    let currency2 = Number(data.rates.GBP);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
@@ -482,45 +480,45 @@ function myData(data, amountValue){
 
   /* Swiss Franc row */
   {
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("chfeur").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("chfusd").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("chfgbp").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(3);
     document.getElementById("chfjpy").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CHF);
+    let currency2 = Number(data.rates.CHF);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
@@ -530,45 +528,45 @@ function myData(data, amountValue){
 
   /* Yen row */
   {
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("jpyeur").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("jpyusd").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("jpygbp").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("jpychf").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CAD);
+    let currency1 = Number(data.rates.CAD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.JPY);
+    let currency2 = Number(data.rates.JPY);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
@@ -578,45 +576,45 @@ function myData(data, amountValue){
 
   /* Canadian Dollar row */
   {
-    let currency1 = Number(data.response.rates.EUR);
+    let currency1 = Number(data.rates.EUR);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("cadeur").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.USD);
+    let currency1 = Number(data.rates.USD);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("cadusd").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.GBP);
+    let currency1 = Number(data.rates.GBP);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("cadgbp").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.CHF);
+    let currency1 = Number(data.rates.CHF);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(4);
     document.getElementById("cadchf").innerText = conversionResult;
   }
   {
-    let currency1 = Number(data.response.rates.JPY);
+    let currency1 = Number(data.rates.JPY);
     let currency1Figures = currency1.toFixed(4);
-    let currency2 = Number(data.response.rates.CAD);
+    let currency2 = Number(data.rates.CAD);
     let currency2Figures = currency2.toFixed(4);
     let conversion = ((currency1Figures*10000)/(currency2Figures*10000));
     let conversionResult = conversion.toFixed(3);
